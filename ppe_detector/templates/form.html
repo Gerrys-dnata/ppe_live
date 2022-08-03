@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Safety{% endblock %}
+
+{% block content %}
+<h1>{{ STATIC_URL}}</h1>
+<video id="safety_video" width="50%" height="50%" autoplay="autoplay" controls="controls">
+    <source src="main\static\video\safety.mp4" type="video/mp4"></source>
+    <source  src="main\static\video\safety.ogg" type="video/ogg"></source>
+</video>
+  
+
+{% endblock %}

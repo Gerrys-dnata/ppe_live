@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}Safety{% endblock %}
+
+{% block content %}
+<br>
+<div>
+  <div>
+    <audio autoplay="autoplay">
+        <source src="main\static\audio\greetings.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+      <audio  id="footmarks">
+        <source src="main\static\audio\instructions.mp3" type="audio/mp3" />
+      </audio>
+
+  </div>
+<br>
+  <div style="text-align: center;">
+    <h3>
+      Hello!<br> Hope you are doing good.
+    </h3>
+
+    <br>
+    <br>
+    <h4>
+      Please Stand on the Foot Marks.
+    </h4>
+
+  </div>
+  <hr>
+<br>
+  <div style="text-align: center;">
+    <button id="proceed" style="background-color:#0088ce;" class="btn btn-primary btn-lg" onclick="window.location.href='results';showLoader();this.disabled=true;">Proceed</button>
+  
+  </div>
+  <div  id="img" style="display: none; text-align: center;" >
+    <img src="\main\static\images\loader.gif">
+  </div>
+</div>
+
+<style>
+  h3 {
+  font-size: 50px;
+  font-weight: 400;
+  /* background-image: repeating-radial-gradient(circle closest-corner at 100px 100px, #61bd4f, #61bd4f 10%, #0088ce 20%); */
+  background-image: conic-gradient(
+    #61bd4f 0%, #61bd4f 33%, #0088ce 33%, #61bd4f 66%, #0088ce 66%, #0088ce 99%
+  );
+  
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: 
+}
+
+h4 {
+  font-size: 50px;
+  font-weight: 400;
+  /* background-image: repeating-radial-gradient(circle closest-corner at 100px 100px, #61bd4f, #61bd4f 10%, #0088ce 20%); */
+  background-image: conic-gradient(
+    #0088ce 0%, #0088ce 33%, #61bd4f 33%, #0088ce 66%, #61bd4f 66%, #61bd4f 99%
+  );
+  
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: 
+}
+
+
+
+</style>
+
+<script>
+  
+  var audioPlayer = document.getElementById("footmarks");; 
+  setTimeout(function() { audioPlayer.play(); }, 3000)
+  
+  
+
+  var showLoader = function(){
+    var img = document.getElementById("img");
+    img.style.display = "Block";
+    
+  }
+
+</script>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Results{% endblock %}
+
+{% block content %}
+
+<div style="text-align: center;">
+
+    <div >
+        <img src="{{ MEDIA_URL }} main\static\images\{{sign|safe}}" alt="Caution" style="width: 80% ; height: 80% ;">
+    </div>
+
+    <!-- <div>
+        <img src="{{ MEDIA_URL }} main\static\images\results\{{img_name|safe}}" alt="Image" width="300" height="300">
+    </div> -->
+
+    
+
+    <div style="text-align: center;">
+        <button style="background-color:#0088ce;" class="btn btn-primary btn-lg " onclick="window.location.href='/'">Back to Home</button>
+    </div>
+
+<div>
+    <audio autoplay="autoplay">
+        <source src="main\static\audio\{{sound|safe}}" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </div>
+
+</div>
+
+{% endblock %}

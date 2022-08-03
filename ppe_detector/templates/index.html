@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Safety{% endblock %}
+
+{% block content %}
+
+<div>
+  <video width="510" height="380" style="width: 100%;" loop autoplay controls>
+      <source src="main\static\video\Dnata.mp4" type="video/mp4">
+      <!-- <source src="movie.ogg" type="video/ogg"> -->
+    Your browser does not support the video tag.
+  </video>
+  <br>
+  <div style="text-align: center;">
+    <button style="background-color:#0088ce;" class="btn btn-primary btn-lg " onclick="window.location.href='instructions'">Proceed</button>
+  </div>
+  <br>
+</div>
+<style>
+
+video {
+   border: 3px solid #61bd4f;
+   padding: 5px;
+   width: auto;
+   height: auto;
+}
+
+</style>
+{% endblock %}

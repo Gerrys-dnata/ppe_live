@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Awareness{% endblock %}
+
+{% block content %}
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js">
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){   
+   $("#myVideo").bind('ended', function(){
+      location.href=".";   
+   }); 
+  });
+</script>
+
+<video id="myVideo" width="320" height="240" controls="controls" autoplay>
+  <source src="main\static\video\Dnata.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
+<!-- <script type="text/javascript">
+    // Do not name the function "play()"
+    function playVideo(){
+        var video = document.getElementById('video');
+        video.play();
+        video.addEventListener('ended',function(){
+            window.location = 'index';
+        });
+    }
+    </script>
+<video id="video" width="320" height="240" autoplay controls>
+    <source src="main\static\video\Dnata.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+</video> -->
+<!-- <video width="320" height="240" loop autoplay controls>
+    <source src="main\static\video\Dnata.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> -->
+{% endblock %}
